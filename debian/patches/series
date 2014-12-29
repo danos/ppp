@@ -43,3 +43,6 @@ no_crypt_hack
 resolv.conf_no_log
 zzz_config
 secure-card-interpreter-fix
+
+# pending upstream approval
+pppd-debug-octal-dump
