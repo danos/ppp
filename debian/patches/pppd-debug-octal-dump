@@ -1,0 +1,28 @@
+commit 5e8c3cb256a7e86e3572a82a75d51c6850efdbdc
+Author: Philip A. Prindeville <philipp@redfish-solutions.com>
+Date:   Fri Dec 19 17:52:58 2014 -0700
+
+    pppd: Fix sign-extension when displaying bytes in octal
+    
+    print_string() displays characters as \\%.03o but without first
+    casting it from "char" to "unsigned char" so it gets sign-extended
+    to an int. This causes output like \37777777630 instead of \230.
+    
+    Signed-off-by: Philip A. Prindeville <philipp@redfish-solutions.com>
+---
+ pppd/utils.c |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/pppd/utils.c b/pppd/utils.c
+index 29bf970905d58ffdcba9fe68cc7c62526fc9430e..3ac1b60926d20014808dcaf708d59f6adb33ee1a 100644
+--- a/pppd/utils.c
++++ b/pppd/utils.c
+@@ -625,7 +625,7 @@ print_string(p, len, printer, arg)
+ 		printer(arg, "\\t");
+ 		break;
+ 	    default:
+-		printer(arg, "\\%.3o", c);
++		printer(arg, "\\%.3o", (unsigned char) c);
+ 	    }
+ 	}
+     }
