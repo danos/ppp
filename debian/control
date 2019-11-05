@@ -2,10 +2,10 @@ Source: ppp
 Section: admin
 Priority: optional
 Homepage: http://ppp.samba.org/
-Maintainer: Chris Boot <bootc@debian.org>
-Uploaders: Marco d'Itri <md@linux.it>
+Maintainer: Vyatta Package Maintainers <DL-vyatta-help@att.com>
 Build-Depends:
- debhelper (>= 11~),
+ debhelper (>= 9~),
+ debhelper (>= 9.20160709) | dh-systemd,
  libpam0g-dev,
  libpcap0.8-dev,
  libssl-dev,

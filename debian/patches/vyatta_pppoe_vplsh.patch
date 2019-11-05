@@ -1,0 +1,25 @@
+--- a/pppd/plugins/rp-pppoe/plugin.c
++++ b/pppd/plugins/rp-pppoe/plugin.c
+@@ -48,6 +48,7 @@
+ #include <signal.h>
+ #include <net/ethernet.h>
+ #include <net/if_arp.h>
++#include <netinet/ether.h>
+ #include <linux/ppp_defs.h>
+ #include <linux/if_pppox.h>
+ 
+@@ -231,6 +232,14 @@
+ 	goto errout;
+     }
+ 
++    char ether_buff[48];
++    ether_ntoa_r((const struct ether_addr *)conn->myEth, ether_buff);
++    script_setenv("MYETH", ether_buff, 1);
++    ether_ntoa_r((const struct ether_addr *)conn->peerEth, ether_buff);
++    script_setenv("PEERETH", ether_buff, 1);
++    snprintf(ether_buff, 48, "%d", ntohs(conn->session));
++    script_setenv("SESSION", ether_buff, 1);
++
+     return conn->sessionSocket;
+ 
+  errout:
