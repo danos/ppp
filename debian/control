@@ -4,8 +4,7 @@ Priority: optional
 Homepage: http://ppp.samba.org/
 Maintainer: Vyatta Package Maintainers <DL-vyatta-help@att.com>
 Build-Depends:
- debhelper (>= 9~),
- debhelper (>= 9.20160709) | dh-systemd,
+ debhelper (>= 11),
  libpam0g-dev,
  libpcap0.8-dev,
  libssl-dev,

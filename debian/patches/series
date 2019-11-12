@@ -58,5 +58,4 @@ eaptls-mppe.patch
 replace-vendored-hash-functions.patch
 
 # Vyatta
-use-openssl-for-the-DES-instead-of-the-libcrypt.patch
 vyatta_pppoe_vplsh.patch
