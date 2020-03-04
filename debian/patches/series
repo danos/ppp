@@ -15,6 +15,7 @@
 0014-pppd-Remove-unused-declaration-of-ttyname.patch
 0015-pppd-Provide-error-implementation-in-pppoe-discovery.patch
 0016-pppoe-include-netinet-in.h-before-linux-in.h.patch
+0017-pppd-Fix-bounds-check-in-EAP-code.patch
 
 # to be merged upstream
 adaptive_echos
@@ -56,6 +57,9 @@ rc_mksid-no-buffer-overflow
 pppd-soname-hack.patch
 eaptls-mppe.patch
 replace-vendored-hash-functions.patch
+
+# nmu
+glibc-2.28.patch
 
 # Vyatta
 vyatta_pppoe_vplsh.patch

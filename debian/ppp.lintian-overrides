@@ -15,3 +15,8 @@ ppp binary: package-contains-readme-for-other-platform-or-distro usr/share/doc/p
 # setuid root required to allow non-root (members of dip) to run ppp
 ppp binary: setuid-binary usr/sbin/pppd 4754 root/dip
 
+# Have older vyatta releases use DANOS ppp package
+ppp binary: package-needs-versioned-debhelper-build-depends 11
+
+# rc script is not being used
+ppp binary: systemd-no-service-for-init-rcS-script pppd-dns

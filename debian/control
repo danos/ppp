@@ -4,7 +4,7 @@ Priority: optional
 Homepage: http://ppp.samba.org/
 Maintainer: Vyatta Package Maintainers <DL-vyatta-help@att.com>
 Build-Depends:
- debhelper (>= 11),
+ debhelper (>= 9),
  libpam0g-dev,
  libpcap0.8-dev,
  libssl-dev,
@@ -16,6 +16,7 @@ Rules-Requires-Root: binary-targets
 
 Package: ppp
 Architecture: linux-any
+Provides: vyatta-ppp
 Depends:
  libpam-modules,
  libpam-runtime,
