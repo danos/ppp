@@ -1,4 +1,4 @@
-ppp (2.4.7-2+4vyatta6) unstable; urgency=medium
+ppp (2.4.7-2+4.1+vyatta1) unstable; urgency=medium
 
   * Nessus Scan: CVE-2020-8597: Debian DSA-4632-1: ppp - security update
 
