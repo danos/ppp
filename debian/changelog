@@ -1,3 +1,9 @@
+ppp (2.4.7-2+4vyatta6) unstable; urgency=medium
+
+  * Nessus Scan: CVE-2020-8597: Debian DSA-4632-1: ppp - security update
+
+ -- Sharmila Podury <sharmila.podury@att.com>  Tue, 10 Mar 2020 10:02:30 -0700
+
 ppp (2.4.7-2+4vyatta5) unstable; urgency=medium
 
   * DANOS Import Master
